@@ -1,0 +1,122 @@
+% TODO: makes wrapping line around less retarded
+
+\documentclass[11pt]{res}
+\newsectionwidth{0pt}
+\usepackage[a4paper,bindingoffset=0.4in,%
+  left=0.3in,right=0.5in,top=0.4in,bottom=0.3in,%
+  footskip=.25in]{geometry}
+\usepackage{tabto}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}
+\usepackage[most]{tcolorbox}
+\usepackage{color}
+
+\newcommand{\sectionunderline}{\vspace{-3mm}\hrulefill\\}
+\newcommand{\listingtab}{\tabto{3.5cm}}
+\newcommand{\familiartab}{\tabto{6.7cm}}
+\newcommand{\afterfamiliar}{\tabto{9.8cm}}
+%\newcommand{\newsect}[1]{\section{\begin{tcolorbox}[adjusted title=flush center, halign=flush center, bicolor, colback=gray!20, frame hidden, boxrule=0pt, colbacklower=white] \Large \bf #1 \end{tcolorbox}}}
+\newcommand{\newsect}[1]{\section{\Large \bf #1}}
+\newcommand{\email}[1]{\faEnvelope\hspace{1mm} \href{mailto:#1}{#1}}
+\newcommand{\phone}[1]{\faMobilePhone\hspace{1mm} #1}
+\newcommand{\github}[1]{\faGithubSquare\hspace{1mm} \href{https://github.com/#1}{#1}}
+\newcommand{\linkedin}[1]{\faLinkedinSquare\hspace{1mm} \href{https://linkedin.com/in/#1}{#1}}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue
+}
+
+\makeatletter
+\def\@tablebox#1{\begin{tabular}[t]{@{}c@{\extracolsep{\fill}}}#1\end{tabular}}
+\makeatother
+
+\definecolor{darkgray}{gray}{0.15}
+
+\begin{document}
+\name{\Huge Derek Pham\\[5pt]}
+\address{
+  {\color{darkgray}\footnotesize School address: 40A Leon Street \#7754, Boston, MA 02115}\\
+  \footnotesize\phone{(802) 503-5089}
+  \large{$\bullet$}
+  \footnotesize\email{derekpham67@gmail.com}
+  \large{$\bullet$}
+  \footnotesize\github{derekpham}
+  \large{$\bullet$}
+  \footnotesize\linkedin{derek-pham97}\\
+  \small Available: January - August 2019
+}
+
+\begin{resume}
+  \newsect{EDUCATION}{
+    \sectionunderline{
+      {\bf \large Northeastern University}, Boston, MA \hfill Sept. 2016 - present\\
+      College of Computer and Information Science}\\
+                     {\it Candidate for a Bachelor of Science in Computer Science} \hfill May 2020\\
+                     {\it Minor in Mathematics and Physics}\\
+                     {\bf Related courses}:\listingtab
+                     Object-Oriented Design, Algorithms and Data, Computer Systems, Theory of\\
+                     \listingtab Computation, Modern Physics, Calculus 3, Linear Algebra, Probability and Statistics\\
+                     GPA:\listingtab 4.0/4.0\\
+                     Activities: \listingtab Robotics Club, Photography Club, Intramural Spikeball
+  }
+
+  \newsect{COMPUTER KNOWLEDGE}{
+    \sectionunderline{
+      {\bf Languages}: \listingtab Java (proficient), Haskell (proficient), Python, C, C\#, Racket\\
+      {\bf Tools}: \listingtab IntelliJ, emacs, \LaTeX, Eclipse, Visual Studio\\
+      {\bf Frameworks}: \listingtab Django
+    }
+  }
+
+  \newsect{EXPERIENCE}{
+    \sectionunderline{
+      {\bf PowerAdvocate Inc}, Boston, MA \hfill Jan. 2018 - present\\
+      {\it Software Developer Co-op - Data As a Service Team}
+      \begin{itemize}
+        {\item Backend stuff}
+        {\item Frontend stuff}
+      \end{itemize}
+
+      {\bf Northeastern University}, Boston, MA \hfill Sept. 2017 - present\\
+      {\it Research assistant for Christo Wilson and Ron Robertson}
+      \begin{itemize}
+        {\item Developing back-end for a website that aims to analyze order effects and search rankings}
+        {\item Analyzing  users' input data to determine the influences of order effects and search rankings}
+      \end{itemize}
+
+      {\bf Xemory LLC}, Burlington, VT \hfill Oct. 2015 - Dec. 2015\\
+      {\it Intern}
+      \begin{itemize}
+        {\item Collaborated in pair programming to develop a Javascript editor in C\# and participated in code reviews}
+        {\item Shadowed the game design and physics engine development of the startup's code base}
+      \end{itemize}
+    }
+  }
+
+  \newsect{PERSONAL PROJECTS}{
+    \sectionunderline{
+      {\bf NUCareers Alternative} \hfill Ongoing
+      \begin{itemize}
+        {\item Using Selenium to scrape job postings data on NUCareers' website in Python}
+        {\item Using JSoup to parse scraped HTML data in Java}
+        {\item Making a simple website that is easier to use than NUCareers}
+      \end{itemize}
+
+      {\bf Eat} \hfill Ongoing
+      \begin{itemize}
+        {\item Developing a desktop-based application that helps users keep track of and pick restaurants}
+        {\item Using TCP/IP, Multithreaded Programming, and Yelp API}
+      \end{itemize}
+    }
+  }
+
+  \newsect{INTERESTS}{
+    \sectionunderline{
+      Spikeball, Tennis, Photography, One Piece Manga, Ping Pong, Biking, Hiking, Traveling, Minesweeper
+    }
+  }
+\end{resume}
+\end{document}
