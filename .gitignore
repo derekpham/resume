@@ -1,5 +1,9 @@
 *
 !.gitignore
-!Derek-Pham-resume.tex
-!Derek-Pham-resume.pdf
+!own
+!own/Derek-Pham-resume.tex
+!own/Derek-Pham-resume.pdf
+!other
+!other/Derek-Pham-resume.tex
+!other/Derek-Pham-resume.pdf
 !Makefile
