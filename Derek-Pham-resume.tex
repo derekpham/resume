@@ -1,0 +1,113 @@
+% TODO: makes wrapping line around less retarded
+\documentclass[11pt]{res}
+\newsectionwidth{0pt}
+\usepackage[a4paper,bindingoffset=0.4in,%
+  left=0.3in,right=0.5in,top=0.4in,bottom=0.3in,%
+  footskip=.25in]{geometry}
+\usepackage{tabto}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\setmainfont{Linux Libertine O}
+\usepackage[most]{tcolorbox}
+\usepackage{color}
+
+\newcommand{\sectionunderline}{\vspace{-3mm}\hrulefill\\}
+\newcommand{\listingtab}{\tabto{3.5cm}}
+\newcommand{\familiartab}{\tabto{6.7cm}}
+\newcommand{\afterfamiliar}{\tabto{9.8cm}}
+%\newcommand{\newsect}[1]{\section{\begin{tcolorbox}[adjusted title=flush center, halign=flush center, bicolor, colback=gray!20, frame hidden, boxrule=0pt, colbacklower=white] \Large \bf #1 \end{tcolorbox}}}
+\newcommand{\newsect}[1]{\section{\Large \bf #1}}
+\newcommand{\email}[1]{\faEnvelope\hspace{1mm} \href{mailto:#1}{#1}}
+\newcommand{\phone}[1]{\faMobilePhone\hspace{1mm} #1}
+\newcommand{\github}[1]{\faGit\hspace{1mm} \href{https://github.com/#1}{#1}}
+\newcommand{\linkedin}[1]{\faLinkedinSquare\hspace{1mm} \href{https://linkedin.com/in/#1}{#1}}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue
+}
+
+\makeatletter
+\def\@tablebox#1{\begin{tabular}[t]{@{}c@{\extracolsep{\fill}}}#1\end{tabular}}
+\makeatother
+
+\definecolor{darkgray}{gray}{0.15}
+
+\begin{document}
+\name{\Huge Derek Pham\\[5pt]}
+\address{
+  \large\phone{(802) 503-5089}\:
+  \large{$\bullet$}
+  \large\email{derekpham67@gmail.com}\:
+  \large{$\bullet$}
+  \large\github{derekpham}\:
+  \large{$\bullet$}
+  \large\linkedin{derek-pham97}\\
+  \normalsize Available: January - August 2019
+}
+
+\begin{resume}
+  \newsect{\faGraduationCap\ EDUCATION}{
+    \sectionunderline{
+      {\bf Northeastern University}, Boston, MA \hfill Sept. 2016 - present\\
+      College of Computer and Information Science}\\
+                     {\it Candidate for a Bachelor of Science in Computer Science} \hfill May 2020\\
+                     {\it Minor in Mathematics and Physics}\vspace{2mm}\\
+                     Related courses:
+                     \listingtab Object-Oriented Design, Algorithms and Data, Large Scale Data Storage\\
+                     \listingtab Programming Languages, Operating Systems, Networks and Distributed Systems\\
+                     \listingtab Calculus III, Linear Algebra, Probability and Statistics\\
+                     GPA:\listingtab 3.98/4.0\\
+                     Activities: \listingtab Northeastern ACM, Badminton, Spikeball, Photography\\
+                     Study Abroad: \listingtab London School of Economics and Political Science \hfill Summer 2018\\
+                     \listingtab (Studied Real Analysis, and Introduction to Big Data Analysis)
+  }
+
+  \newsect{\faCogs\ SKILLS}{
+    \sectionunderline{
+      {\bf Languages}: \listingtab Java, Python, C, Javascript, Haskell, C\#\\
+      {\bf Databases}: \listingtab PostgreSQL, Oracle, MySQL, SQLite\\
+      {\bf Tools}: \listingtab Spring, Hibernate, Gradle, Ansible, Django, Git, SVN\\
+      {\bf Others}: \listingtab Scrum, Agile, Pair Programming
+    }
+  }
+
+  \newsect{\faUsers\ EXPERIENCE}{
+    \sectionunderline{
+      {\bf Northeastern University}, Boston, MA \hfill Sept. 2017 - present\\
+      {\it Research assistant for Christo Wilson and Ron Robertson - Network Science Department}
+      \begin{itemize}
+        {\item Creating website in Django studying how search ranking affects personal and political opinions of over 100 participants}
+        {\item Designing application's entire SQLite database schema to store subjects' information}
+        {\item Configuring application to assign each subject a random treatment of pre-ordered search results and track browsing activities}
+        {\item Building frontend with ability to switch between different CSS skins to mimic sites such as search sites, social media sites, and job posting sites}
+      \end{itemize}
+
+      {\bf PowerAdvocate Inc}, Boston, MA \hfill Jan. 2018 - Jun. 2018\\
+      {\it Software Developer Co-op - Data As a Service Team}
+      \begin{itemize}
+        {\item Built upon and delivered completed product, Customer Service Report (CSR), shortening Customer Success team's time to produce reports by around 50 times}
+        {\item Developed all required features virtually from scratch for 3 different kinds of reports, in Spring and Hibernate}
+        {\item Researched database providers and chose CSR's database to be PostgreSQL}
+        {\item Aggregated customers' energy platform usage through Salesforce REST API and Oracle database}
+        {\item Automated CSR deployment through Ansible}
+      \end{itemize}
+
+      {\bf Xemory LLC}, Burlington, VT \hfill Oct. 2015 - Dec. 2015\\
+      {\it Intern}
+      \begin{itemize}
+        {\item Created via pair-programming a Javascript editor using C\# and Visual Studio}
+        {\item Integrated syntax highlighting and Javascript interpreting ability to editor}
+        {\item Developed the editor's ability to communicate with Unity through TCP/IP}
+      \end{itemize}
+    }
+  }
+
+  \newsect{\faCamera\ INTERESTS}{
+    \sectionunderline{
+      Photography, Spikeball, Tennis (High School Captain), Poker, Toast Masters
+    }
+  }
+\end{resume}
+\end{document}
