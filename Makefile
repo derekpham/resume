@@ -1,5 +1,2 @@
 own_res:
-	cd own && xelatex Derek-Pham-resume.tex
-
-own_ref:
-	cd own && xelatex references.tex
+	xelatex Derek-Pham-resume.tex
