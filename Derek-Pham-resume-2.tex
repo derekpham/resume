@@ -20,7 +20,7 @@
 \newcommand{\newsect}[1]{\section{\Large \bf #1}}
 \newcommand{\email}[1]{\faEnvelope\hspace{1mm} \href{mailto:#1}{#1}}
 \newcommand{\phone}[1]{\faMobilePhone\hspace{1mm} #1}
-\newcommand{\github}[1]{\faGit\hspace{1mm} \href{https://github.com/#1}{#1}}
+\newcommand{\github}[1]{\faGithubAlt\hspace{1mm} \href{https://github.com/#1}{#1}}
 \newcommand{\linkedin}[1]{\faLinkedinSquare\hspace{1mm} \href{https://linkedin.com/in/#1}{#1}}
 
 \hypersetup{
@@ -66,9 +66,8 @@
 
   \newsect{\faCogs\ SKILLS}{
     \sectionunderline{
-      {\bf Languages}: \listingtab Java, Python, Kotlin, SQL, C, Javascript, Haskell, C\#\\
-      {\bf Databases}: \listingtab PostgreSQL, Oracle, MySQL, SQLite\\
-      {\bf Tools}: \listingtab Spring, Hibernate, Gradle, Ansible, Django, Git, SVN\\
+      {\bf Languages}: \listingtab Java, Python, Kotlin, C\#, C, Javascript, Haskell\\
+      {\bf Tools}: \listingtab Spring, Hibernate, Gradle, Django, jQuery, Git, SVN, Ansible\\
       {\bf Others}: \listingtab Scrum, Agile, Pair Programming
     }
   }
@@ -93,13 +92,17 @@
         {\item Aggregated customers' energy platform usage through Salesforce REST API and Oracle database}
         {\item Automated CSR deployment through Ansible}
       \end{itemize}
+    }
+  }
 
-      {\bf Xemory LLC}, Burlington, VT \hfill Oct. 2015 - Dec. 2015\\
-      {\it Intern}
+  \newsect{\faGithubAlt\ PROJECTS}{
+    \sectionunderline{
+      {\bf nualt}\\
+      {\it An easy-to-use alternative to Northeastern's career website}
       \begin{itemize}
-        {\item Created via pair-programming a Javascript editor using C\# and Visual Studio}
-        {\item Integrated syntax highlighting and Javascript interpreting ability to editor}
-        {\item Developed the editor's ability to communicate with Unity through TCP/IP}
+        {\item \sloppy{Creating a browser extension in Javascript that extracts information on every visited job page on Northeastern's career website (and potentially other job sites)}}
+        {\item Builds REST API to store and retrieve job information using Kotlin and Spring Boot}
+        {\item Designing simple and easy-to-use front end in Javascript using jQuery and JsGrid}
       \end{itemize}
     }
   }
