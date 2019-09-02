@@ -12,7 +12,7 @@
 \usepackage{color}
 
 \newcommand{\sectionunderline}{\vspace{-3mm}\hrulefill\\}
-\newcommand{\listingtab}{\tabto{3.5cm}}
+\newcommand{\listingtab}{\tabto{2.8cm}}
 \newcommand{\familiartab}{\tabto{6.7cm}}
 \newcommand{\afterfamiliar}{\tabto{9.8cm}}
 %\newcommand{\newsect}[1]{\section{\begin{tcolorbox}[adjusted title=flush center, halign=flush center, bicolor, colback=gray!20, frame hidden, boxrule=0pt, colbacklower=white] \Large \bf #1 \end{tcolorbox}}}
@@ -43,22 +43,23 @@
   \large\github{derekpham}\:
   \large{$\bullet$}
   \large\linkedin{derek-pham97}\\
-  \normalsize Availability for internships/co-ops: Jan. - Aug. 2020
 }
 
 \begin{resume}
   \newsect{\faGraduationCap\ EDUCATION}{
     \sectionunderline{
-      {\bf Northeastern University}, Boston, MA \hfill Sept. 2016 - present\\
-      College of Computer and Information Science} \hfill Dec. 2020\\
-    GPA:\listingtab \hfill 3.97/4.0
+      {\bf Northeastern University}, Bachelor of Science in Computer Science \hfill Sept. 2016 - Apr. 2021\\
+      {\bf GPA}: \listingtab 3.97/4.0\\
+      {\bf Coursework}: \listingtab Networks and Distributed Systems, Large Scale Data Storage, Computer Systems\\
+      \listingtab Object Oriented Design, Algorithms, Programming Languages, Artificial Intelligence
+    }
   }
 
   \newsect{\faCogs\ SKILLS}{
     \sectionunderline{
       {\bf Languages}: \listingtab Java, Python, Kotlin, Racket, JavaScript\\
-      {\bf Data Technologies}: \listingtab PostgreSQL, HBase, Kafka, Hadoop, Spark, Athena, S3, Glue\\
-      {\bf Tools}: \listingtab Spring, Hibernate, Django, Git, Ansible, DropWizard
+      {\bf Systems}: \listingtab PostgreSQL, HBase, Kafka, Hadoop, Spark, Athena, S3, Glue\\
+      {\bf Others}: \listingtab Spring, Hibernate, Django, Git, Ansible, DropWizard
     }
   }
 
@@ -67,27 +68,24 @@
       {\bf Yelp}, San Francisco, CA \hfill Jun. 2019 - Aug. 2019\\
       {\it Software Engineer Intern - Metrics Data}
       \begin{itemize}
-        {\item Created a batch post-processor tool for Yelp's data lake with Spark and AWS Glue, processing half a Terabyte per batch daily}
-        {\item Greatly simplified Redshift and Athena query patterns and improved query time by more than 80\%, enabling much quicker and more accurate decision making for business analysts and data scientists}
-        {\item Technologies used: Python, PySpark, AWS Glue, Amazon S3, Apache Parquet}
+        {\item Created a batch post-processor tool for Yelp's data lake with Apache Spark and AWS Glue, processing half a Terabyte per batch daily}
+        {\item Simplified Athena and Redshift query patterns, and improved query performance with said tool by around 500x, enabling much quicker decision making for business analysts and data scientists}
       \end{itemize}
 
       {\bf HubSpot}, Cambridge, MA \hfill Jan. 2019 - May. 2019\\
       {\it Software Developer Co-op - Connected Email Backend}
       \begin{itemize}
-        {\item Migrated 2 Redis tables with hundreds of Gigabytes of data to HBase, saving around \$100,000 a year}
+        {\item Migrated 2 Redis tables with hundreds of Gigabytes of data to HBase using Apache Hadoop, saving around \$100,000 a year}
         {\item Redesigned the email scheduling system using MySQL, HBase and Amazon S3, which solved 5 different bugs that caused long-lasting Jiras}
-        {\item Enforced user's permissions on 12 different microservices, improving security of HubSpot's public API}
-        {\item Technologies used: Java, DropWizard, Hadoop, HBase, Kafka, MySQL}
+        {\item Enforced permission checking on 12 different microservices, improving security of HubSpot's public API}
       \end{itemize}
 
       {\bf PowerAdvocate}, Boston, MA \hfill Jan. 2018 - Jun. 2018\\
       {\it Software Developer Co-op - Data As a Service Team}
       \begin{itemize}
-        {\item Built from the ground up and completed the Customer Service Report (CSR) product, saving hundreds of man hours every quarter to build reports}
-        {\item Led research effort to find the main database for CSR, and decided that PostgreSQL was the best fit}
-        {\item Designed a Continuous Delivery framework for CSR, allowing deploying to production through 1 command}
-        {\item Technologies used: Java, Spring, Hibernate, Gradle, PostgreSQL, Ansible, JavaScript, jQuery}
+        {\item Built from the ground up and completed the Customer Service Report (CSR) product in Spring and Hibernate, saving hundreds of man hours every quarter to build reports}
+        {\item Designed a Continuous Delivery framework for CSR using Ansible, allowing deploying to production through one simple command}
+        {\item Led research effort to find a suitable database for CSR, and decided that PostgreSQL was the best fit}
       \end{itemize}
     }
   }
@@ -97,7 +95,7 @@
       {\bf freddie} {\it A music recommendation app}
       \begin{itemize}
         {\item Developed a simple web app in Spring Boot that recommends songs to users based on their music history}
-        {\item Powered the recommendation and storage engine using Neo4J}
+        {\item Powered the recommendation and storage engines using Neo4J}
       \end{itemize}
 
       {\bf doodle} {\it A research project with Northeastern's Network Science Department}
